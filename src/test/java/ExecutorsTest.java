@@ -51,19 +51,34 @@ public class ExecutorsTest {
 
         CompletableFuture<Void> allResult=CompletableFuture.allOf(future1,future2,future3);
         try {
-
             allResult.get();
-            System.out.println(future1.get());
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
-        System.out.println(future1.toString());
         System.out.println(userInfo);
         Long end=System.currentTimeMillis();
         System.out.println(start-end);
     }
+
+    @Test
+    public void testNormal(){
+
+        Long start=System.currentTimeMillis();
+
+        userInfo.setBasicInfo(userService.getUserBasicInfo("1"));
+
+        userInfo.setClassesInfo(userService.getClassesInfo("1"));
+
+        userInfo.setOtherInfo(userService.otherInfo("1"));
+
+        System.out.println(userInfo);
+        Long end=System.currentTimeMillis();
+        System.out.println(start-end);
+
+    }
+
 
     @After
     public void doAfter(){
