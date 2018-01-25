@@ -1,3 +1,5 @@
+package com.newtouch.fbb.mulithread.demo;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -21,7 +23,7 @@ public class UserService {
      * @param userId
      * @return
      */
-    Map<String,String> getUserBasicInfo(String userId){
+    public Map<String,String> getUserBasicInfo(String userId){
         try {
             Thread.sleep(100);
         } catch (InterruptedException e) {
@@ -33,7 +35,7 @@ public class UserService {
         return map;
     }
 
-    Map<String,String> getClassesInfo(String userId) {
+    public Map<String,String> getClassesInfo(String userId) {
         try {
             Thread.sleep(100);
         } catch (InterruptedException e) {
@@ -45,7 +47,7 @@ public class UserService {
         return map;
     }
 
-    Map<String,String> otherInfo(String userId) {
+    public Map<String,String> otherInfo(String userId) {
         try {
             Thread.sleep(100);
         } catch (InterruptedException e) {

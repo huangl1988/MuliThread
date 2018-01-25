@@ -1,10 +1,12 @@
+import com.newtouch.fbb.mulithread.demo.Executors;
+import com.newtouch.fbb.mulithread.demo.UserInfo;
+import com.newtouch.fbb.mulithread.demo.UserService;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 
 /**
@@ -24,7 +26,7 @@ public class ExecutorsTest {
             userInfo=new UserInfo();
         }
         if(executor==null){
-            executor=Executors.getExecutor();
+            executor= Executors.getExecutor();
         }
 
         userService=UserService.getUserService();

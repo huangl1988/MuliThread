@@ -1,3 +1,5 @@
+package com.newtouch.fbb.mulithread.demo;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
